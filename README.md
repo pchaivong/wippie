@@ -5,24 +5,24 @@ Setting up project
 --------------
 
 ```bash
-# Create working directory
+# 1. Create working directory (Optional)
 mkdir workspace
 cd workspace
-# Checkout source code from github
+# 2. Checkout source code from github
 git clone https://github.com/pchaivong/wippie.git
+cd wippie
 
-# Create virtual environment
+# 3. Create virtual environment
 # Highly recommended using name 'env' because it's has been added to .gitignore file already
 # If you use another name, ensure that you add that name to .gitignore as well.
 virtualenv env
 
-# Activate using virtual environment (Windows)
+# 4. Activate using virtual environment (Windows)
 .\env\Scripts\activate
-
 # For Mac or Linux
 source env/bin/activate
 
-# download all mandatory library
+# 5. Download all mandatory library
 pip install -r requirements.txt
 
 
