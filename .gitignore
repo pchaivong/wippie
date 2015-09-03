@@ -10,3 +10,6 @@
 .DS_Store?
 
 env
+
+# database files
+*.sqlite3
