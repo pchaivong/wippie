@@ -13,3 +13,6 @@ env
 
 # database files
 *.sqlite3
+
+# Project IDE
+.idea
