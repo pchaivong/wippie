@@ -1,0 +1,10 @@
+*.pyc
+*.exe
+*.dll
+
+*.7z
+*.gz
+*.zip
+
+.DS_Store
+.DS_Store?
