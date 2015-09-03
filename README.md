@@ -24,5 +24,18 @@ source env/bin/activate
 
 # 5. Download all mandatory library
 pip install -r requirements.txt
+```
+
+Set up database
+--------------
+
+```bash
+cd wippie
+python manage.py migrate
+# There will be 'db.sqlite3' file created
+```
+
+
+
 
 
