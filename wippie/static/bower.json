@@ -1,0 +1,26 @@
+{
+  "name": "wippie-frondend",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pchaivong/wippie",
+  "authors": [
+    "Prawit Chaivong <pchaivong@gmail.com>"
+  ],
+  "description": "wippie frondend implemented using Polymer",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "polymer",
+    "wippie",
+    "frontend"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
