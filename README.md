@@ -36,6 +36,39 @@ python manage.py migrate
 ```
 
 
+Create Super User
+--------------
+
+```bash
+python manage.py createsuperuser
+#Put email(used as a username when login), password, and date of birth
+
+
+Run Server
+--------------
+Test running server and using admin portal
+
+```bash
+python manage.py runserver 8080
+# Launch chrome and browse to http://localhost:8080/admin
+# Port number can be changed
+
+
+Holiday Model (example)
+--------------
+Holiday model has been added. Also already implemented a serializer class and viewset
+For demonstration purposes.
+
+You can check it at
+
+```bash
+http://localhost:8080/api/holiday
+
+
+
+
+
+
 
 
 
