@@ -1,12 +1,12 @@
 __author__ = 'prawit.chaivong'
 from rest_framework import serializers
-from .models import UserProfile
+from .models import TSUser
 from .models import Holiday
 
 
-class UserProfileSerializer(serializers.ModelSerializer):
+class TSUserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserProfile
+        model = TSUser
 
 
 class HolidaySerializer(serializers.ModelSerializer):
