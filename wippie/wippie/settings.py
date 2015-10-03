@@ -107,4 +107,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-AUTH_PROFILE_MODULE = 'api.UserProfile'
+AUTH_USER_MODEL = 'api.TSUser'
