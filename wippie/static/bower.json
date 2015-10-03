@@ -22,5 +22,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "paper-item": "PolymerElements/paper-item#~1.0.3",
+    "paper-card": "PolymerElements/paper-card#~1.0.6",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.4"
+  }
 }
