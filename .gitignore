@@ -16,3 +16,6 @@ env
 
 # Project IDE
 .idea
+
+# bower components
+bower_components
