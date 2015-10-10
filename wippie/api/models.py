@@ -85,4 +85,28 @@ class Holiday(models.Model):
         return "[%s] %s" % (self.date.strftime("%Y-%m-%d"), self.description)
 
 
+# Wip
+# TODO: Implement
+class Wip(models.Model):
+    pass
+
+
+# Late
+# TODO: Implement
+class Late(models.Model):
+    pass
+
+
+# Leave
+# TODO: Implement
+class Leave(models.Model):
+    pass
+
+
+# OnCall
+# TODO: Implement
+class OnCall(models.Model):
+    pass
+
+
 
