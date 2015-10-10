@@ -1,2 +1,58 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<title>Test paper-item</title>
+	<link rel="import" href="bower_components/paper-item/paper-item.html">
+	<link rel="import" href="bower_components/paper-card/paper-card.html">
+	<link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+
+	<style>
+		.wipcard {
+			background: #3F51B5;
+			width: 250px;
+		}
+		.wipcard > div {
+			background: #8BC34A;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="layout horizontal wrap wipcard">
+		<div vertical layout>
+			<div flex horizontal layout>Day shift</div>
+			<div flex horizontal layout>Night shift</div>
+		</div>
+		<div>
+			Some wip value
+		</div>
+	</div>
+
+	<paper-card heading="23 Oct 15">
+		<div class="layout horizontal wrap">
+			<div class="layout vertical shift">
+				<div>Day Shift</div>
+				<div>Night Shift</div>
+			</div>
+			<div class="layout vertical">
+				<paper-item>New: 1</paper-item>
+				<paper-item>Pending: 2</paper-item>
+				<paper-item>Inprogress: 3</paper-item>
+			</div>
+			<div>
+				<paper-card image="images/test.jpg">
+					<div class="card-content">Prawit</div>
+				</paper-card>
+			</div>
+		</div>
+	</paper-card>
+
+	<paper-card heading="header" flex>
+		<paper-item>Item 1</paper-item>
+		<paper-item>Item 2</paper-item>
+		<paper-item>Item 3</paper-item>
+		<paper-item>Item 4</paper-item>
+	</paper-card>
+
+</body>
 </html>
