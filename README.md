@@ -31,6 +31,7 @@ Set up database
 
 ```bash
 cd wippie
+python manage.py makemigrations
 python manage.py migrate
 # There will be 'db.sqlite3' file created
 ```
