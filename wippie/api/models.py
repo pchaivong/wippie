@@ -86,10 +86,16 @@ class Holiday(models.Model):
 
 
 # Wip
-# TODO: Implement
-class Wip(models.Model):
-    pass
+# Contain WIP Information daily
 
+class Wip(models.Model):
+    date = models.DateField()
+    new_amt = models.PositiveSmallIntegerField()
+    pending_amt = models.PositiveSmallIntegerField ()
+    inprogress_amt = models.PositiveSmallIntegerField()
+
+    def __unicode__(self):
+        return "[%s]" % (self.date.strftime("%Y-%m-%d"))
 
 # Late
 # TODO: Implement
