@@ -101,7 +101,7 @@ class Wip(models.Model):
 # Late
 
 class Late(models.Model):
-    date_id = models.OneToOneField(Wip, related_name="Late_Date", default=datetime.now)
+    date_id = models.ForeignKey(Wip, related_name="Late_Date", default=datetime.now)
     user_id = models.ForeignKey(TSUser, related_name="Late_User")
 
 
@@ -111,7 +111,7 @@ class Late(models.Model):
 # Leave
 # TODO: Implement
 class Leave(models.Model):
-    date_id = models.OneToOneField(Wip, related_name="Leave_Date", default=datetime.now)
+    date_id = models.ForeignKey(Wip, related_name="Leave_Date", default=datetime.now)
     user_id = models.ForeignKey(TSUser, related_name="Leave_User")
     duration = models.FloatField()
 
