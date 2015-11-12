@@ -8,7 +8,9 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from .models import Holiday
 from .models import TSUser
 from .models import Wip
-
+from .models import OnCall
+from .models import Late
+from .models import Leave
 
 class TSUserCreationForm(forms.ModelForm):
 
@@ -82,3 +84,6 @@ admin.site.unregister(Group)
 # Register your models here.
 admin.site.register(Holiday)
 admin.site.register(Wip)
+admin.site.register(OnCall)
+admin.site.register(Late)
+admin.site.register(Leave)

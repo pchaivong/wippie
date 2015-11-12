@@ -4,6 +4,7 @@ from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
 
+from datetime import datetime
 
 class TSUserManager(BaseUserManager):
     def create_user(self, email, date_of_birth, password=None):
@@ -98,21 +99,34 @@ class Wip(models.Model):
         return "[%s]" % (self.date.strftime("%Y-%m-%d"))
 
 # Late
-# TODO: Implement
-class Late(models.Model):
-    pass
 
+class Late(models.Model):
+    date_id = models.OneToOneField(Wip, related_name="Late_Date", default=datetime.now)
+    user_id = models.ForeignKey(TSUser, related_name="Late_User")
+
+
+    def __unicode__(self):
+        return "[%s] %s" % (self.date_id.date.strftime("%Y-%m-%d"), self.user_id.email)
 
 # Leave
 # TODO: Implement
 class Leave(models.Model):
-    pass
+    date_id = models.OneToOneField(Wip, related_name="Leave_Date", default=datetime.now)
+    user_id = models.ForeignKey(TSUser, related_name="Leave_User")
+    duration = models.FloatField()
 
+    def __unicode__(self):
+        return "[%s] %s %.1f" % (self.date_id.date.strftime("%Y-%m-%d"), self.user_id.email, self.duration)
 
 # OnCall
-# TODO: Implement
+
 class OnCall(models.Model):
-    pass
+    date = models.DateField()
+    shift_day = models.ForeignKey(TSUser, related_name="shift_day_username")
+    shift_night = models.ForeignKey(TSUser, related_name="shift_night_username")
+    queue_manager = models.ForeignKey(TSUser, related_name="queue_manager_username")
 
-
+    def __unicode__(self):
+        return "[%s] %s %s %s" % (self.date.strftime("%Y-%m-%d"), self.shift_day.email,
+                                  self.shift_night.email, self.queue_manager.email)
 
