@@ -101,8 +101,8 @@ class Wip(models.Model):
 # Late
 
 class Late(models.Model):
-    date_id = models.ForeignKey(Wip, related_name="Late_Date", default=datetime.now)
-    user_id = models.ForeignKey(TSUser, related_name="Late_User")
+    date_id = models.ForeignKey(Wip, related_name="Late", default=datetime.now)
+    user_id = models.ForeignKey(TSUser, related_name="Later")
 
 
     def __unicode__(self):
@@ -111,8 +111,8 @@ class Late(models.Model):
 # Leave
 # TODO: Implement
 class Leave(models.Model):
-    date_id = models.ForeignKey(Wip, related_name="Leave_Date", default=datetime.now)
-    user_id = models.ForeignKey(TSUser, related_name="Leave_User")
+    date_id = models.ForeignKey(Wip, related_name="Leave", default=datetime.now)
+    user_id = models.ForeignKey(TSUser, related_name="Leaver")
     duration = models.FloatField()
 
     def __unicode__(self):
@@ -122,9 +122,9 @@ class Leave(models.Model):
 
 class OnCall(models.Model):
     date = models.DateField()
-    shift_day = models.ForeignKey(TSUser, related_name="shift_day_username")
-    shift_night = models.ForeignKey(TSUser, related_name="shift_night_username")
-    queue_manager = models.ForeignKey(TSUser, related_name="queue_manager_username")
+    shift_day = models.ForeignKey(TSUser, related_name="Day")
+    shift_night = models.ForeignKey(TSUser, related_name="Night")
+    queue_manager = models.ForeignKey(TSUser, related_name="QM")
 
     def __unicode__(self):
         return "[%s] %s %s %s" % (self.date.strftime("%Y-%m-%d"), self.shift_day.email,
